@@ -1,0 +1,1 @@
+<?php echo '<p>No articles currently available for this case.</p>'; ?>
