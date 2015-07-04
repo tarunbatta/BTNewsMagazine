@@ -9,6 +9,7 @@
 			<div style="text-align: justify;">
 				<?php echo get_the_excerpt(); ?>
 			</div>
+			<?php echo sharing_display(); ?>
 		</div>
 	</div>
 <?php } else { 
