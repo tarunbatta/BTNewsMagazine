@@ -7,7 +7,7 @@
 			<br/>
 			<?php while (have_posts()) {
 					the_post();
-					get_template_part('article', 'search');
+					get_template_part('article');
 					?> <hr/> <?php
 				}
 			}

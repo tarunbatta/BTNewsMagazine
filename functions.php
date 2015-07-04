@@ -96,7 +96,7 @@ function GetCurrentPageUrl() {
 }
 
 function GetIconUrl() {
-	echo bloginfo('template_directory') . "/favicon.ico";
+	echo esc_url( get_template_directory_uri() ) . "/favicon.ico";
 }
 
 function GetImageUrl() {
@@ -105,7 +105,7 @@ function GetImageUrl() {
 		echo wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 	}
 	else {
-		echo bloginfo('template_directory') . "/logo.png";
+		echo esc_url( get_template_directory_uri() ) . "/logo.png";
 	}
 }
 
@@ -330,7 +330,7 @@ function pagination() {
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		if ( ! in_array( 2, $links ) )
-			echo '<li>…</li>';
+			echo '<li></li>';
 	}
 
 	/**	Link to current page, plus 2 pages in either direction if necessary */
@@ -343,7 +343,7 @@ function pagination() {
 	/**	Link to last page, plus ellipses if necessary */
 	if ( ! in_array( $max, $links ) ) {
 		if ( ! in_array( $max - 1, $links ) )
-			echo '<li>…</li>' . "\n";
+			echo '<li></li>' . "\n";
 
 		$class = $paged == $max ? ' class="active"' : '';
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
@@ -355,26 +355,5 @@ function pagination() {
 
 	echo '</ul></nav>' . "\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// TODO
-// Add Read more at during copy paste
 
 ?>

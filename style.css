@@ -7,10 +7,42 @@ Description: BTNewsMag is a bootstrap based modern, dynamic and response News Ma
 Version: 1.0.0
 License: MIT License
 License URI: https://github.com/battatech/wpBTNewsMag/blob/master/LICENSE
-Tags: news, magazine, bootstrap, right-sidebar, responsive-layout, custom-colors, custom-header, custom-menu, featured-images, theme-options, threaded-comments, full-width-template
+Tags: responsive-layout, featured-images
 Text Domain: BTNewsMag
 */
 
-.container{
+.container {
 	padding-top: 25px;
+}
+
+.wp-caption {
+
+}
+
+.wp-caption-text {
+
+}
+
+.sticky {
+
+}
+
+.gallery-caption {
+
+}
+
+.bypostauthor {
+
+}
+
+.alignright {
+
+}
+
+.alignleft {
+
+}
+
+.aligncenter {
+
 }
