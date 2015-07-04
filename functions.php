@@ -4,7 +4,7 @@
 function themeSetup() {
 	// Registering Navigation Menus
 	register_nav_menus(array(
-		'primary' => __('Primary Menu')
+		'primary' => __('Primary Menu', 'btnewsmag')
 	));
 	
 	// Add featured image support
@@ -252,18 +252,7 @@ function getPostCategories() {
 }
 
 function getPostTags() {
-	global $post;
-	$tags = wp_get_post_tags( $post->ID );
-	$seperator = ", ";
-	$output = "Topics: ";
-
-	if ($tags) {
-		foreach ($tags as $tag) {
-			$output .= '<a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>' . $seperator;
-		}
-
-		echo trim($output, $seperator);
-	}
+	the_tags('Topics: ', ', ', '');
 }
 
 // Gets the custom length for excerpts

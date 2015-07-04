@@ -1,4 +1,3 @@
-/*
 Theme Name: BTNewsMag
 Theme URI: https://github.com/battatech/wpBTNewsMag
 Author: Tarun Batta
@@ -9,40 +8,3 @@ License: MIT License
 License URI: https://github.com/battatech/wpBTNewsMag/blob/master/LICENSE
 Tags: responsive-layout, featured-images
 Text Domain: btnewsmag
-*/
-
-.container {
-	padding-top: 25px;
-}
-
-.wp-caption {
-
-}
-
-.wp-caption-text {
-
-}
-
-.sticky {
-
-}
-
-.gallery-caption {
-
-}
-
-.bypostauthor {
-
-}
-
-.alignright {
-
-}
-
-.alignleft {
-
-}
-
-.aligncenter {
-
-}
