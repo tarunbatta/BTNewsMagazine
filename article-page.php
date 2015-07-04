@@ -20,5 +20,7 @@
 	?>
 
 	<h1><?php the_title(); ?></h1>
-	<?php the_content(); ?>
+	<div style="text-align: justify;">
+		<?php the_content(); ?>
+	</div>
 </article>

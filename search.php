@@ -12,7 +12,7 @@
 				}
 			}
 			else {
-				get_template_part('noData');
+				get_template_part('article', 'none');
 			} ?>
 	</div>
 	<?php get_sidebar(); ?>

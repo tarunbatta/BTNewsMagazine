@@ -1,10 +1,6 @@
-<?php
+<?php get_header(); ?>
 
-get_header();
-
-if (have_posts()) {
-?>
-	<h2><?php 
+<h2><?php
 	if (is_category()) {
 		single_cat_title();
 	}
@@ -28,17 +24,25 @@ if (have_posts()) {
 	else {
 		echo 'Archives:';
 	}
-	?></h2>
-<?php
-	while (have_posts()) {
-		the_post();
-		get_template_part('article', get_post_format());
-	}
-}
-else {
-	echo '<p>No content found.</p>';
-}
+?></h2>
 
-get_footer();
+<div class="row">
+	<div class="col-sm-9 blog-main">
+		<?php
+			if (have_posts()) {
+				while (have_posts()) {
+					the_post();
+					get_template_part('article', get_post_format());
+					?> <hr/> <?php
+				}
+			}
+			else {
+				get_template_part('article', 'none');
+			}
+		?>
+	</div>
+	<?php get_sidebar(); ?>
+</div>
 
-?>
+<?php pagination(); ?>
+<?php get_footer(); ?>
