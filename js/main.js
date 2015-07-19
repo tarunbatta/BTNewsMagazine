@@ -5,4 +5,6 @@ $(document).ready(function() {
 
 	$('.sidebar-module > ul').addClass('list-group');
 	$('.sidebar-module > ul > li').addClass('list-group-item');
+
+	$('img').addClass("img-responsive");
 });

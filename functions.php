@@ -91,7 +91,7 @@ function GetDomain() {
 
 function GetCurrentPageUrl() {
 	global $wp;
-	$current_url = add_query_arg( $wp->query_string, '', home_url( $wp->request ) );
+	$current_url = home_url( $wp->request );
 	echo $current_url;
 }
 
@@ -257,7 +257,7 @@ function getPostTags() {
 
 // Gets the custom length for excerpts
 function custom_excerpt_length() {
-	return 50;
+	return 25;
 }
 add_filter('excerpt_length', 'custom_excerpt_length');
 
@@ -319,7 +319,7 @@ function pagination() {
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
 		if ( ! in_array( 2, $links ) )
-			echo '<li></li>';
+			echo '<li><a href="#">...</a></li>' . "\n";
 	}
 
 	/**	Link to current page, plus 2 pages in either direction if necessary */
@@ -332,7 +332,7 @@ function pagination() {
 	/**	Link to last page, plus ellipses if necessary */
 	if ( ! in_array( $max, $links ) ) {
 		if ( ! in_array( $max - 1, $links ) )
-			echo '<li></li>' . "\n";
+			echo '<li><a href="#">...</a></li>' . "\n";
 
 		$class = $paged == $max ? ' class="active"' : '';
 		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );

@@ -15,14 +15,14 @@
 		<meta property="og:title" content="<?php GetPageTitle(); ?>" />
 		<meta property="og:description" content="<?php GetPageDescription(); ?>" />
 	
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@<?php bloginfo('name'); ?>">
-		<meta name="twitter:creator" content="@<?php bloginfo('name'); ?>">
-		<meta name="twitter:url" content="<?php GetCurrentPageUrl(); ?>">
-		<meta name="twitter:image" content="<?php GetImageUrl(); ?>">
-		<meta name="twitter:title" content="<?php GetPageTitle(); ?>">
-		<meta name="twitter:description" content="<?php GetPageDescription(); ?>">
-		<meta name="twitter:domain" content="<?php GetDomain(); ?>">
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@<?php bloginfo('name'); ?>" />
+		<meta name="twitter:creator" content="@<?php bloginfo('name'); ?>" />
+		<meta name="twitter:url" content="<?php GetCurrentPageUrl(); ?>" />
+		<meta name="twitter:image" content="<?php GetImageUrl(); ?>" />
+		<meta name="twitter:title" content="<?php GetPageTitle(); ?>" />
+		<meta name="twitter:description" content="<?php GetPageDescription(); ?>" />
+		<meta name="twitter:domain" content="<?php GetDomain(); ?>" />
 
 		<?php GetArticleMetaTags(); ?>
 
